@@ -1,5 +1,25 @@
 # WordPress ローカル開発環境の構築
 
+```shell
+sw_vers
+
+# info
+ProductName:    macOS
+ProductVersion: 12.6.3
+BuildVersion:   21G419
+
+node -v
+
+# info
+v16.16.0
+```
+
+その他必要なApp
+
+Docker
+
+VScode
+
 ## WordPressローカルはwp-envで
 
 - [WordPress制作環境の過去と現在、そして未来はどうなる？wp-envの使い方を紹介](https://liginc.co.jp/612383)
