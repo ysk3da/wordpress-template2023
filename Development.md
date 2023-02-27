@@ -144,6 +144,6 @@ Critical などの処置をして、ファーストビュー対応の部分を�
 
 - [【WV.10】WordPress高速化のためのCore Web Vital チェックリスト](https://capitalp.jp/2021/08/03/check-list-for-wp-web-core-vital/)
 
-## WordPressの機能だけで構築し、ページごとにCSSやJavaScriptの最適化は手動で行う場合
+## WordPressの機能だけで構築し、CSSやJavaScriptの最適化はページごとに手動で行う場合
 
 - [WordPressのテーマを作る羽目になったWebエンジニアへ](https://zenn.dev/antez/articles/8e576daf822a84)
