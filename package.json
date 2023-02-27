@@ -1,0 +1,18 @@
+{
+  "name": "colantotte-resno-wp",
+  "version": "1.0.0",
+  "description": "- [BOX](https://recus-groove.app.box.com/folder/192802092723)",
+  "main": "index.js",
+  "scripts": {
+    "wp-env": "wp-env",
+    "start": "wp-env start",
+    "stop": "wp-env stop",
+    "update": "wp-env start --update"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/env": "^5.12.0"
+  }
+}
