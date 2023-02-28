@@ -6,6 +6,14 @@ const autoprefixer = require("autoprefixer");
 
 module.exports = function (eleventyConfig) {
 
+  // PassthroughCopy
+  // Copy `src/screenshot.png` to `dist/screenshot.png`
+  eleventyConfig.addPassthroughCopy("src/screenshot.png");
+  // Copy `src/images` to `dist/images`
+  eleventyConfig.addPassthroughCopy("src/images");
+  // Copy `src/php` to `dist/`
+  eleventyConfig.addPassthroughCopy({"src/php": "/"});
+
   // Sass Settings
   eleventyConfig.addPlugin(eleventySass, [
     {
@@ -26,7 +34,7 @@ module.exports = function (eleventyConfig) {
           return (data) => {
             // console.log({data});
             // return data.page.filePathStem.replace(/^\/styles\//, "/css/") + ".css";
-            return data.page.filePathStem.replace(/^\/styles\//, "") + ".css";
+            return data.page.filePathStem.replace(/^\/styles\//, "/") + ".css";
           };
         }
       },
