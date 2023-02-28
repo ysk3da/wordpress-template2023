@@ -12,6 +12,11 @@ remove_action('wp_head', 'feed_links_extra', 3);
 // RSDの削除
 remove_action( 'wp_head', 'rsd_link' );
 
+// v5.9以降 global-stylesのインラインCSS出力を排除する
+add_action('wp_enqueue_scripts', 'remove_global_styles');
+function remove_global_styles() {
+wp_dequeue_style('global-styles');
+}
 // v6.1以降 classic-theme.min.css の削除
 add_action( 'wp_enqueue_scripts', 'remove_classic_theme_style' );
 function remove_classic_theme_style() {
