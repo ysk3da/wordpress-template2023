@@ -67,6 +67,23 @@ npx wp-env run cli wp user list
 npm run update
 ```
 
+## DBの共有
+
+GUI上で変更した内容（プラグインなど）はDBをエクスポートすることで共有できます。
+
+### DBのエクスポート
+
+```sh
+npm run db-export
+```
+
+### DBのインポート
+
+```sh
+npm run db-import
+```
+
+
 ## giboでgitignoreファイルを生成する
 
 - [giboでgitignoreを自動生成する](https://qiita.com/taquaki-satwo/items/358d2d473fff9a25d5eb)
@@ -133,6 +150,8 @@ Critical などの処置をして、ファーストビュー対応の部分を�
 ここですね、
 
 - webpack or vite でバンドルだけする（その他のリソースはタスクランナーでコピーのみする）
+  [11tyをタスクランナーとして利用する](./elevnty.md)  
+  [Viteの設定](./vite.md)
 - vue3 + vite でMPA
 - create-react-appでMPA
 

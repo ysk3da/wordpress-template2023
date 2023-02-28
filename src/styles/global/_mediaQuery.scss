@@ -1,0 +1,96 @@
+$breakpoint: (
+  sm: "30em", // 480px (16pxの場合。以下同)
+  md: "48em", // 768px
+  lg: "62em", // 992px
+  'lg2': "64em", // 1024px
+  xl: "80em", // 1280px
+);
+
+@mixin mq-up($bp) {
+  @media (min-width: #{map-get($breakpoint, $bp)}) {
+    @content;
+  }
+}
+@mixin mq-down($bp) {
+  @media (max-width: #{map-get($breakpoint, $bp)}) {
+    @content;
+  }
+}
+@mixin mq-between($minBp, $maxBp) {
+  @media (min-width: #{map-get($breakpoint, $minBp)}) and (max-width: #{map-get($breakpoint, $maxBp)}) {
+    @content;
+  }
+}
+
+
+
+/**
+ * # Breakpoints Samples
+ *
+ * ## Chakra UI
+ * - [Default Theme - Chakra UI](https://chakra-ui.com/docs/styled-system/theme#breakpoints)
+ *
+ * ```js
+ * import { extendTheme } from '@chakra-ui/react'
+ *
+ * const breakpoints = {
+ *   sm: '30em', // 480px (16pxの場合。以下同)
+ *   md: '48em', // 768px
+ *   lg: '62em', // 992px
+ *   xl: '80em', // 1280px
+ *   '2xl': '96em', // 1536px
+ * }
+ *
+ * const theme = extendTheme({ breakpoints, ... })
+ * ```
+ *
+ * ## tailwindcss
+ * - [Breakpoints - tailwindcss](https://v1.tailwindcss.com/docs/breakpoints)
+ *
+ * ```js
+ * // tailwind.config.js
+ * module.exports = {
+ *   theme: {
+ *     screens: {
+ *       'sm': '640px',
+ *       // => @media (min-width: 640px) { ... }
+ *
+ *       'md': '768px',
+ *       // => @media (min-width: 768px) { ... }
+ *
+ *       'lg': '1024px',
+ *       // => @media (min-width: 1024px) { ... }
+ *
+ *       'xl': '1280px',
+ *       // => @media (min-width: 1280px) { ... }
+ *     }
+ *   }
+ * }
+ * ```
+ *
+ * ## bootstrap5
+ * - [Breakpoints - bootstrap5](https://getbootstrap.jp/docs/5.0/layout/breakpoints/)
+ *
+ * 12の倍数で作られている
+ *
+ * ```sass
+ * $grid-breakpoints: (
+ *   xs: 0,
+ *   sm: 576px,
+ *   md: 768px,
+ *   lg: 992px,
+ *   xl: 1200px,
+ *   xxl: 1400px
+ * );
+ * ```
+ *
+ * ## MUI
+ * - [Breakpoints - MUI](https://mui.com/material-ui/customization/breakpoints/)
+ *
+ * xs, extra-small: 0px
+ * sm, small: 600px
+ * md, medium: 900px
+ * lg, large: 1200px
+ * xl, extra-large: 1536px
+ *
+ */

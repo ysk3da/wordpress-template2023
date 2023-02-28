@@ -18,7 +18,7 @@
     "WP_DEBUG": true
   },
   "mappings": {
-    "wp-content/themes/colantotte-resno-wp/": "./dist/",
+    "wp-content/themes/mytheme/": "./dist/",
     "sql": "./sql"
   }
 }
