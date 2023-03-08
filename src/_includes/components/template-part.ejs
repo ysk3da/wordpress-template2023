@@ -1,0 +1,12 @@
+<%
+  if(typeof porps === 'undefined') {
+    const props = {
+      slug: 'string', // isRquired
+      tagName: 'string', // isOptional
+      className: 'string', // isOptional
+    }
+  }
+const tagName = props.tagName? `, "tagName":"${props.tagName}"` : null;
+const className = props.className? `, "className":"${props.className}"` : null;
+-%>
+<!-- wp:template-part {"slug":"<%= props.slug -%>"<%- tagName -%><%- className -%>} /-->

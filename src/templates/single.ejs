@@ -1,0 +1,29 @@
+---
+permalink: "templates/single.html"
+---
+<%
+// ここにページの中身を書く
+const children = `
+<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+`;
+%>
+<%- include('../_includes/components/template-part.ejs', {
+  props: {
+    slug: 'header',
+    tagName:'header',
+  }
+}) -%>
+<%- include('../_includes/components/group-main.ejs', {
+  props:{
+    children: children, // isRquired
+    // layoutType: 'constrained | default | flex', // isRquired
+    style: {"spacing":{"margin":{"top":"var:preset|spacing|50"}}}, //isOptional Object
+    mainStyle: 'margin-top:var(--wp--preset--spacing--50)', //isOptional
+    // mainClasses: 'string', //isOptional
+  }}) -%>
+<%- include('../_includes/components/template-part.ejs', {
+  props: {
+    slug: 'footer',
+    tagName:'footer',
+  }
+}) -%>
