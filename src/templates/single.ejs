@@ -5,8 +5,14 @@ permalink: "templates/single.html"
 // ここにページの中身を書く
 const children = `
 <!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+<!-- wp:post-featured-image /-->
+<!-- wp:post-title /-->
+<!-- wp:post-author {"showAvatar":false} /-->
+<!-- wp:post-date /-->
+<!-- wp:post-terms {"term":"category"} /-->
+<!-- wp:post-excerpt /-->
 `;
-%>
+-%>
 <%- include('../_includes/components/template-part.ejs', {
   props: {
     slug: 'header',

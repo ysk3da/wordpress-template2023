@@ -2,9 +2,55 @@
   "$schema": "https://schemas.wp.org/trunk/theme.json",
   "version": 2,
   "settings": {
+    "appearanceTools": true,
     "layout": {
       "contentSize": "650px",
       "wideSize": "1200px"
+    },
+    "useRootPaddingAwareAlignments": true,
+    "typography": {
+      "fontSizes": [
+        {
+          "slug": "small",
+          "size": "0.875rem"
+        },
+        {
+          "slug": "medium",
+          "size": "1rem"
+        },
+        {
+          "slug": "large",
+          "size": "1.125rem"
+        },
+        {
+          "slug": "x-large",
+          "size": "1.3125rem"
+        }
+      ]
+    },
+    "color": {
+      "palette": [
+        {
+          "color": "#279ac4",
+          "slug": "primary",
+          "name": "Primary"
+        },
+        {
+          "color": "#1d7291",
+          "slug": "primary-dark",
+          "name": "PrimaryDark"
+        },
+        {
+          "color": "#2e353f",
+          "slug": "body",
+          "name": "Body"
+        },
+        {
+          "color": "#fafaf9",
+          "slug": "background",
+          "name": "Background"
+        }
+      ]
     }
   },
   "templateParts": [

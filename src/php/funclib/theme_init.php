@@ -57,14 +57,14 @@ if (!function_exists('my_theme_setup')) {
     /*
     * Load additional block styles.
     */
-    // $styled_blocks = ['query-pagination-numbers'];
-    // foreach ( $styled_blocks as $block_name ) {
-    //   $args = array(
-    //     'handle' => "my_theme-$block_name",
-    //     'src'    => get_theme_file_uri( "assets/css/blocks/$block_name.css" ),
-    //   );
-    //   wp_enqueue_block_style( "core/$block_name", $args );
-    // }
+    $styled_blocks = ['query-pagination-numbers'];
+    foreach ( $styled_blocks as $block_name ) {
+      $args = array(
+        'handle' => "my_theme-$block_name",
+        'src'    => get_theme_file_uri( "css/blocks/$block_name.css" ),
+      );
+      wp_enqueue_block_style( "core/$block_name", $args );
+    }
 
     /* 投稿管理画面にあるビジュアルモードタブを非表示 */
     // function disable_visual_editor_pg()
