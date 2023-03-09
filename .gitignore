@@ -412,5 +412,8 @@ dist
 # Built Visual Studio Code Extensions
 *.vsix
 
-# for @11ty/eleventy-plugin-vite
-.11ty-vite
+# add
+./dist
+./backend
+!./backend/.htaccess
+./backup

@@ -1,0 +1,23 @@
+<%
+  if(typeof porps === 'undefined') {
+    const props = {
+      children: 'html', // isRquired
+      layoutType: 'constrained | default | flex', // isOptional
+      style: {}, //isOptional Object
+      mainStyle: 'string', //isOptional
+      mainClasses: 'string', //isOptional
+    }
+  }
+// wp:group settings
+const style = props.style? `, "style":${JSON.stringify(props.style)}` : null;
+const layoutType = (!props.layoutType || props.layoutType === 'default')? null : `, "layout":{"type":"${props.layoutType}"}`;
+// main tag attributes
+const mainStyle = props.mainStyle? ` style="${props.mainStyle}"` : null;
+const mainClasses = props.mainClasses? ` ${props.mainClasses}` : null;
+
+-%>
+<!-- wp:group {"tagName":"main"<%- layoutType -%><%- style -%>} -->
+<main class="wp-block-group<%= mainClasses -%>"<%- mainStyle -%>>
+  <%- props.children -%>
+</main>
+<!-- /wp:group -->

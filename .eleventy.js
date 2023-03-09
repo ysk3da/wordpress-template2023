@@ -5,10 +5,13 @@ const postcss = require("postcss");
 const autoprefixer = require("autoprefixer");
 
 module.exports = function (eleventyConfig) {
-
   // PassthroughCopy
+  // Copy `src/favicon.ico` to `dist/favicon.ico`
+  eleventyConfig.addPassthroughCopy("src/favicon.ico");
   // Copy `src/screenshot.png` to `dist/screenshot.png`
   eleventyConfig.addPassthroughCopy("src/screenshot.png");
+  // Copy `src/theme.json` to `dist/theme.json`
+  eleventyConfig.addPassthroughCopy("src/theme.json");
   // Copy `src/images` to `dist/images`
   eleventyConfig.addPassthroughCopy("src/images");
   // Copy `src/php` to `dist/`

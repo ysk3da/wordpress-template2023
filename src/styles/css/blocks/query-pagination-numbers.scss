@@ -1,0 +1,17 @@
+.wp-block-query-pagination-numbers {
+  display: flex;
+}
+
+.wp-block-query-pagination-numbers .page-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 4px;
+}
+
+.wp-block-query-pagination-numbers a.page-numbers {
+  border: solid 1px;
+  border-radius: 4px;
+}

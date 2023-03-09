@@ -1,0 +1,23 @@
+<%
+  if(typeof porps === 'undefined') {
+    const props = {
+      children: 'html', // isRquired
+      layoutType: 'constrained | default | flex', // isRquired
+      divStyle: 'string', //isOptional
+      divClasses: 'string', //isOptional
+    }
+  }
+// wp:query settings
+const layoutType = props.layoutType? props.layoutType : 'default';
+// div tag attributes
+const divStyle = props.divStyle? ` style="${props.divStyle}"` : null;
+const divClasses = props.divClasses? ` ${props.divClasses}` : null;
+
+-%>
+<!-- wp:query {"query":{"perPage":5,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"layout":{"type":"<%- layoutType -%>"}} -->
+<div class="wp-block-query<%= divClasses -%>"<%- divStyle -%>>
+  <!-- wp:post-template -->
+  <%- props.children -%>
+  <!-- /wp:post-template -->
+</div>
+<!-- /wp:query -->

@@ -1,0 +1,23 @@
+<%
+  if(typeof porps === 'undefined') {
+    const props = {
+      children: 'html', // isRquired
+      layoutType: 'constrained | default | flex', // isRquired
+      style: {}, //isOptional Object
+      divStyle: 'string', //isOptional
+      divClasses: 'string', //isOptional
+    }
+  }
+// wp:group settings
+const style = props.style? `, "style":${JSON.stringify(props.style)}` : null;
+const layoutType = props.layoutType? props.layoutType : 'default';
+// div tag attributes
+const divStyle = props.divStyle? ` style="${props.divStyle}"` : null;
+const divClasses = props.divClasses? ` ${props.divClasses}` : null;
+
+-%>
+<!-- wp:group {"layout":{"type":"<%- layoutType -%>"}<%- style -%>} -->
+<div class="wp-block-group<%= divClasses -%>"<%- divStyle -%>>
+  <%- props.children -%>
+</div>
+<!-- /wp:group -->
