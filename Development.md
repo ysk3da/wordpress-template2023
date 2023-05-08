@@ -58,6 +58,7 @@ npx wp-env run cli wp user list
 ✔ Ran `wp user list` in 'cli'. (in 3s 315ms)
 ```
 
+IDは `admin`、
 パスワードは `password` です。
 
 
